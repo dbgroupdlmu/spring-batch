@@ -41,6 +41,7 @@ import static org.springframework.batch.support.DatabaseType.HSQL;
 import static org.springframework.batch.support.DatabaseType.MYSQL;
 import static org.springframework.batch.support.DatabaseType.ORACLE;
 import static org.springframework.batch.support.DatabaseType.POSTGRES;
+import static org.springframework.batch.support.DatabaseType.KINGBASE;
 import static org.springframework.batch.support.DatabaseType.SQLITE;
 import static org.springframework.batch.support.DatabaseType.SQLSERVER;
 import static org.springframework.batch.support.DatabaseType.SYBASE;
@@ -107,6 +108,9 @@ public class DefaultDataFieldMaxValueIncrementerFactory implements DataFieldMaxV
 			return new OracleSequenceMaxValueIncrementer(dataSource, incrementerName);
 		}
 		else if (databaseType == POSTGRES) {
+			return new PostgresSequenceMaxValueIncrementer(dataSource, incrementerName);
+		}
+		else if (databaseType == KINGBASE) {
 			return new PostgresSequenceMaxValueIncrementer(dataSource, incrementerName);
 		}
 		else if (databaseType == SQLITE) {

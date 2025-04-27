@@ -29,6 +29,7 @@ import org.springframework.batch.item.database.support.HsqlPagingQueryProvider;
 import org.springframework.batch.item.database.support.MySqlPagingQueryProvider;
 import org.springframework.batch.item.database.support.OraclePagingQueryProvider;
 import org.springframework.batch.item.database.support.PostgresPagingQueryProvider;
+import org.springframework.batch.item.database.support.KingbasePagingQueryProvider;
 import org.springframework.batch.item.database.support.SqlServerPagingQueryProvider;
 import org.springframework.batch.item.database.support.SqlitePagingQueryProvider;
 import org.springframework.batch.item.database.support.SybasePagingQueryProvider;
@@ -364,6 +365,7 @@ public class JdbcPagingItemReaderBuilder<T> {
 				case MYSQL: provider = new MySqlPagingQueryProvider(); break;
 				case ORACLE: provider = new OraclePagingQueryProvider(); break;
 				case POSTGRES: provider = new PostgresPagingQueryProvider(); break;
+				case KINGBASE: provider = new KingbasePagingQueryProvider(); break;
 				case SYBASE: provider = new SybasePagingQueryProvider(); break;
 				case SQLITE: provider = new SqlitePagingQueryProvider(); break;
 				default:

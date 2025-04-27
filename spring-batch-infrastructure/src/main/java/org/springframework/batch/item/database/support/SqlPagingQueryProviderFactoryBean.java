@@ -25,6 +25,7 @@ import static org.springframework.batch.support.DatabaseType.HSQL;
 import static org.springframework.batch.support.DatabaseType.MYSQL;
 import static org.springframework.batch.support.DatabaseType.ORACLE;
 import static org.springframework.batch.support.DatabaseType.POSTGRES;
+import static org.springframework.batch.support.DatabaseType.KINGBASE;
 import static org.springframework.batch.support.DatabaseType.SQLITE;
 import static org.springframework.batch.support.DatabaseType.SQLSERVER;
 import static org.springframework.batch.support.DatabaseType.SYBASE;
@@ -81,6 +82,7 @@ public class SqlPagingQueryProviderFactoryBean implements FactoryBean<PagingQuer
 		providers.put(MYSQL,new MySqlPagingQueryProvider());
 		providers.put(ORACLE,new OraclePagingQueryProvider());
 		providers.put(POSTGRES,new PostgresPagingQueryProvider());
+		providers.put(KINGBASE,new KingbasePagingQueryProvider());
 		providers.put(SQLITE, new SqlitePagingQueryProvider());
 		providers.put(SQLSERVER,new SqlServerPagingQueryProvider());
 		providers.put(SYBASE,new SybasePagingQueryProvider());

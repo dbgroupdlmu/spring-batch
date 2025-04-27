@@ -45,6 +45,7 @@ public enum DatabaseType {
 	MYSQL("MySQL"),
 	ORACLE("Oracle"),
 	POSTGRES("PostgreSQL"),
+	KINGBASE("KingbaseES"),
 	SYBASE("Sybase"),
 	H2("H2"),
 	SQLITE("SQLite");
